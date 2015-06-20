@@ -6,6 +6,7 @@
   "dependencies": {
   },
   "schemas": {
-    "storefront": 1
+    "storefront": 1,
+    "colossus": 1
   }
 }
