@@ -22,21 +22,20 @@ var App = React.createClass({
     ListStore.unlisten(this.onChange);
   },
 
+  create() {
+    let todoText = React.findDOMNode(this.refs.todo);
+    ListActions.create({ id: new Date(), name: todoText.value });
+  },
+
   render() {
-    if (this.state.list.length) {
-      return (
-        <div className="container-fluid">
-          <h1>Proudly powered by Colossus</h1>
-          <List list={this.state.list} />
-        </div>
-      );
-    } else {
-      return (
-        <div className="container loading">
-          <h1><i className="fa fa-spinner fa-spin"></i></h1>
-        </div>
-      );
-    }
+    return (
+      <div>
+        <List list={this.state.list} />
+
+        <input type="text" ref="todo" placeholder="Escreva seu todo"/>
+        <button refs="todo-btn" onClick={this.create}>Enviar</button>
+      </div>
+    );
   }
 });
 

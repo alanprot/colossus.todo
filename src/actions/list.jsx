@@ -6,6 +6,22 @@ class ListActions {
     this.dispatch(list);
   }
 
+  removeItem(item) {
+    this.dispatch(item);
+  }
+
+  success(item) {
+    this.dispatch(item);
+  }
+
+  create(item) {
+    this.dispatch();
+
+    ListFetcher.create(item).then(() => {
+      this.actions.success(item);
+    });
+  }
+
   fetchList() {
     this.dispatch();
 
