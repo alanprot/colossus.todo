@@ -1,7 +1,7 @@
 {
-  "name": "colossus.todo",
+  "name": "todo",
   "description": "Todo example",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "devDependencies": {
     "babel-core": "^5.2.16",
     "babel-loader": "^5.0.0",
@@ -16,12 +16,12 @@
     "react-hot-loader": "^1.2.7",
     "style-loader": "^0.9.0",
     "url-loader": "^0.5.5",
-    "vtex": "^0.2.0",
+    "vtex": "^0.2.2",
     "webpack": "^1.8.11",
     "webpack-dev-server": "^1.8.0"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --config webpack.config.js"
   },
   "homepage": "https://github.com/vtex/dreamstore-theme",
   "repository": {
