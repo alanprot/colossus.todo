@@ -1,0 +1,11 @@
+{
+  "name": "colossus.todo",
+  "title": "Todo example",
+  "version": "0.1.0",
+  "owner": "vtex",
+  "dependencies": {
+  },
+  "schemas": {
+    "storefront": 1
+  }
+}
