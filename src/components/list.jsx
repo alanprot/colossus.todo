@@ -2,16 +2,17 @@ import React from 'react';
 import Item from './item';
 
 class List extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <ul className="unordered-list">
-      {this.props.list.forEach(function(item) {
-        <Item data={item}/>
+      {this.props.list.map((item) => {
+        return (
+          <Item info={item} />
+        );
       })}
       </ul>
     );
