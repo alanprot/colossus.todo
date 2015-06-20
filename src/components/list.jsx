@@ -1,14 +1,10 @@
 import React from 'react';
 import Item from './item';
 
-class List extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+var List = React.createClass({
   render() {
     return (
-      <ul className="unordered-list">
+      <ul className="list-unstyled">
       {this.props.list.map((item) => {
         return (
           <Item info={item} />
@@ -17,6 +13,6 @@ class List extends React.Component {
       </ul>
     );
   }
-}
+});
 
 export default List;
